@@ -1,0 +1,194 @@
+
+
+.navbar{
+    opacity: 0;
+    animation: fadeIn 1.3s ease-in-out 0.5s forwards;
+}
+
+/* Custom Styles for the Welcome Page */
+.hero-section {
+    background: white;
+    min-height: 90vh; /* Ensure it takes up at least 90% of the viewport height */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Parent container for mountain image and child div */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Mountain image */
+.mountain {
+    width: 100%;
+    z-index: 1;
+    height: fit-content;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out 0.2s forwards;
+    
+}
+
+
+@keyframes bigToSmall{
+    0%{
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        top: 37%;
+        left: 50%;
+        width: 33%;
+    }
+}
+
+
+/* Child div for trekking images and text/buttons */
+.content-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Trekking images */
+.image-container .trekk {
+    top: 37%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    width: 33%;
+    animation: bigToSmall 1s ease-in ;
+}
+
+.image-container .trekk2 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -10%;
+    width: 30%;
+    display: none;
+}
+
+.image-container .trekk3 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -22%;
+    width: 50%;
+    display: none;
+}
+
+/* Text and buttons */
+.image-container .text-content {
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 30%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+.hero-section .btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 950px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.7rem;
+    }
+
+    .btn-lg{
+        width: 100px;
+        height: 45px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-section .lead {
+        font-size: 0.6rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.3rem;
+        padding: 0;
+            padding-top: 5px;
+    }
+
+    .btn-lg{
+        width: 70px;
+        height: 20px;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

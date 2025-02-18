@@ -1,0 +1,239 @@
+.bg-body-tertiary{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*style for index.ejs*/
+
+body {
+    display: flex;
+    flex-direction: row;  /* Horizontal layout */
+    width: 100%;
+    height: 100vh;  /* Full viewport height */
+    margin: 0;
+    position: relative;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    width: 20%;
+    background-color: rgba(236, 236, 236, 0.616);
+    min-height: 100vh; /* Full height */
+    box-shadow: 5px 0 5px rgba(126, 125, 125, 0.616);
+
+}
+
+.nav-link{
+    height:100%;
+    width: 100%;
+}
+
+.navbar ul{
+    list-style: none;
+    font-size: large;
+    width: 100%;
+}
+
+.navbar ul li{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .nav-item{
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+.navbar .nav-item .profilepic-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar .nav-item #profilePic{
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+
+.navbar .links{
+    width: 100%;
+}
+
+.navbar .links:hover{
+    background-color: silver;
+    border-radius: 50%;
+}
+
+.navbar .logo{
+
+    margin-bottom: 100%;
+}
+
+section{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: scroll;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#rightNav{
+    width: 15%;
+    background-color: rgba(236, 236, 236, 0.616);
+    min-height: 100vh; /* Full height */
+    position: fixed;
+    right: 0;
+    box-shadow: -5px 0 5px rgba(126, 125, 125, 0.616);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(236, 236, 236, 0.616);
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* sign in page form style */
+
+
+#form-Section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: conic-gradient(from -270deg at 75% 110%, midnightblue, lawngreen);
+    width: 40%;
+    height: auto;
+    position: relative;
+    
+}
+
+#form-Section h1{
+    position: absolute;
+    top: 7%;
+    left: 0;
+    box-shadow: -2px 0 2px rgba(126, 125, 125, 0.432);
+}
+
+#form-Section form{
+    padding: 8%;
+    /* border: 2px solid black; */
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: rgba(192, 192, 192, 0.705);
+}
+
+/*Explore page style starts here*/
+/* .explore-nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border: 3px solid red;
+ 
+    
+}
+
+.explore-nav div ul{
+    display: flex;
+    justify-items: space-between;
+    list-style: none;
+    gap: 20%;
+    margin-top: 20px;
+}
+
+.explore-nav div ul li{
+    display: flex;
+}
+
+
+
+.explore-nav div ul .search-part{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.explore-nav div ul input{
+    width: 80%;
+    height: 80%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+   background-color: rgba(255, 255, 255, 0.473);
+   padding: 5px;
+   font-size: large;
+   font-weight: bold;
+}
+
+.explore-nav div ul .search-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.explore-nav div ul .search-icon:hover{
+    background-color: aliceblue;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 35px;
+    height: 35px;
+} */
+
+/*Styles for the explore page uploaded items*/
+#allThePosts{
+    margin: 0;
+        margin-top: 10%; 
+    width: 100%;
+    padding: 0;
+}
+
+#allThePosts ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#allThePosts ul li{
+    width: 100%;
+    max-width: auto;
+    border: 5px solid red;
+}
+
+#allThePosts .uploadedPart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allThePosts .uploadedPart img{
+    width: 80%;
+    height: auto;
+}
+

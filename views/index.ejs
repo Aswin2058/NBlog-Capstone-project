@@ -1,0 +1,43 @@
+<%- include("navBars/header.ejs") %>
+
+<section>
+        <!-- <nav class="explore-nav">
+            <div class="eNav-bar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="search-part"><input type="search" name="searchMe" id="searchMe"><img src="img/search.png" alt="" class="search-icon"></li>
+                </ul>
+            </div>
+        </nav> -->
+
+    <h2 style="margin-top: 5%;">Upload Your Post</h2>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="uploadedImage" required>
+    <textarea name="caption" placeholder="Write something about the image..."></textarea>
+    <button type="submit">Upload</button>
+</form>
+
+<% if(locals.imagePath) {%>
+<div id="allThePosts">
+    <ul>
+        <li>
+            <div class="uploadedPart">
+                <div class="uploadedPart-header">
+                    <h2> <%= name[0] %> </h2>
+                    <p> <%= locals.caption %> </p>
+                </div>
+                <img src=" <%= imagePath %> " alt="">
+            </div>
+            <div class="Server-Part">
+                <img src="img/like.png" alt="">
+                <img src="img/comment.png" alt="">
+                <img src="img/share.png" alt="">
+            </div>
+        </li>
+    </ul>
+</div>
+<% } %>
+  
+</section>
+
+<%- include("navBars/footer.ejs")  %>
