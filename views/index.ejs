@@ -9,13 +9,14 @@
                 </ul>
             </div>
         </nav> -->
-
+<div id="uploadYourPost" >
     <h2 style="margin-top: 5%;">Upload Your Post</h2>
-<form action="/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" name="uploadedImage" required>
-    <textarea name="caption" placeholder="Write something about the image..."></textarea>
-    <button type="submit">Upload</button>
-</form>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="uploadedImage" required>
+        <textarea name="caption" placeholder="Write something about the image..."></textarea>
+        <button type="submit">Upload</button>
+    </form>    
+</div>
 
 <% if(locals.imagePath) {%>
 <div id="allThePosts">

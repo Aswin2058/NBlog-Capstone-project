@@ -8,7 +8,7 @@
     <title> <%= locals.title %> </title>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="mynavbar">
         <div class="nav-link">
           <ul>
             <li class="nav-item logo"><a href="/" >
@@ -17,7 +17,7 @@
             <li class="nav-item links"><a href="/posts" >
               Explore
             </a></li>
-            <li class="nav-item links"><a href="/" >
+            <li class="nav-item links"><a href="/about" >
               About
             </a></li>
             <% if(name) { %>
@@ -29,3 +29,27 @@
         </div>
     </nav>
 
+    <nav class="phones-menu">
+      <button> <img src="img/menu.png" alt=""> </button>  
+    </nav>
+
+    <nav class="phone-navbar">
+      <div class="nav-link">
+        <ul>
+          <li class="nav-item logo"><a href="/" >
+            <%- locals.logo %>
+          </a></li>
+          <li class="nav-item links"><a href="/posts" >
+            Explore
+          </a></li>
+          <li class="nav-item links"><a href="/" >
+            About
+          </a></li>
+          <% if(name) { %>
+            <li class="nav-item links"><a href="/profile" class="profilepic-link"><img src="img/defPicture.jpg" alt="" id="profilePic"><span> <%= name %> </span></a></li> 
+          <% } else {%>
+            <li class="nav-item links"><a href="/submit" > Sign In </a></li> 
+          <% } %>
+        </ul>
+      </div>
+  </nav>

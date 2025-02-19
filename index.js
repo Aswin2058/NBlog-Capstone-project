@@ -49,7 +49,7 @@ app.get("/posts", (req, res) => {
 });
 
 app.get("/submit", (req, res) => {
-    res.render("form.ejs");
+    res.render("myProfile.ejs");
 });
 
 app.post("/submit", (req, res) => {
@@ -68,6 +68,10 @@ app.post("/upload", upload.single("uploadedImage"), (req, res) => {
 app.get("/profile", (req, res) => {
     res.render("myProfile.ejs");
 });
+
+app.get("/about", (req, res) => {
+    res.render("about.ejs");
+})
 
 // Start server
 app.listen(port, () => {
